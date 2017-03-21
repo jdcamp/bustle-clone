@@ -1,17 +1,31 @@
-<div class= "container">
-  <header class= "jumbotron">
-    <title>Bustle</title>
-  </header>
 
+    {{#burger-menu as |burger|}}
+      {{#burger.menu itemTagName="li" as |menu|}}
+        <ul>
+          {{#menu.item}}
+            {{new-article saveArticle='saveArticle'}}
+          {{/menu.item}}
+        </ul>
+      {{/burger.menu}}
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      {{#link-to 'index'}}<img id='logo' class='center-block' src='img/bustle-logo.png' alt='logo'>{{/link-to}}
-      <a href="#"><img class='social-media-logo pull-right'src='img/facebook-logo.png' alt='logo'></a>
-      <a href="#"><img class='social-media-logo pull-right'src='img/twitter-logo.png' alt='logo'></a>
-      <a href="#"><img class='social-media-logo pull-right'src='img/instagram-logo.png' alt='logo'></a>
-      <a href="#"><img class='social-media-logo pull-right'src='img/youtube-logo.png' alt='logo'></a>
-    </div>
-  </nav>
-  {{outlet}}
-</div>
+      {{#burger.outlet}}
+      <header>
+        <title>Bustle</title>
+      </header>
+      <div class="top">
+        <img id='add-image' class='center-block' src="https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsuuj_9qzqUOh5fVF9rYwzc0b5AthvZWIWZn82PRFSXGZu9xZwUhz_mEpkgROKaqZcvlVx10DVKXRzaBB1dNA6SFQwe1JDX2Oq1RkPHG2z4KGob0ce8cUCfikGJbE7sSib0uxve4iEG2OF0i4QUSxVX8GRMXc1tVqR125urM5E4HhN1l5C7nryQmtn86fDWu97R9WIpK0Batn3EdQaWgzARs9CRZViOU5XYePBp-ZdeNkHeWd1uOvgduyKcNj9eXOV9p435vd4M&sig=Cg0ArKJSzFKGx0DYMSbiEAE&urlfix=1&adurl=https://lovelace-media.imgix.net/uploads/1442/ebf7e680-e578-0134-19bf-060e3e89e053.jpg?w=970&h=353fit=clip&auto=format&q=70" alt="img" class='center-block' />
+      </div>
+
+      <nav class="navbar navbar-default" id="wrap">
+        <span id='menu-toggle' {{action burger.state.actions.toggle}} class='glyphicon glyphicon-menu-hamburger pull-left'></span>
+        {{#link-to 'index'}}<img id='logo' class='center-block' src='img/bustle-logo.png' alt='logo'>{{/link-to}}
+        <a href="#"><img class='social-media-logo pull-right'src='img/facebook-logo.png' alt='logo'></a>
+        <a href="#"><img class='social-media-logo pull-right'src='img/twitter-logo.png' alt='logo'></a>
+        <a href="#"><img class='social-media-logo pull-right'src='img/instagram-logo.png' alt='logo'></a>
+        <a href="#"><img class='social-media-logo pull-right'src='img/youtube-logo.png' alt='logo'></a>
+      </nav>
+      <div class= "container article-list" >
+        {{outlet}}
+      </div>
+      {{/burger.outlet}}
+    {{/burger-menu}}

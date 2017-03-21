@@ -1,17 +1,67 @@
-#logo {
-  height: 40px;
-  width: auto;
-}
-.social-media-logo {
-  height: 25px;
-  width: auto;
-  margin: 5px;
+.content {
+  background-color: #F7F7F7;
 }
 
-.navbar {
-  background-color: white;
-  opacity: 0.7;
+.ember-burger-menu .bm-menu {
+  background: linear-gradient(135deg,#50E3C2,#85BAFF);
 }
+
+#logo {
+  height: 40px;
+  position: relative;
+  width: auto;
+  top: 10px;
+
+}
+
+#add-image {
+  position: absolute;
+  top:0;
+  margin-left: auto;
+  margin-right:auto;
+  left: 0;
+  right: 0;
+}
+
+
+  .navbar {
+    background: linear-gradient(135deg,#FFF,#FFF);
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 61px;
+
+    .social-media-logo {
+      position: relative;
+      margin-right: 5px;
+      height: 35px;
+      top: -25px;
+      width: auto;
+    }
+
+    #menu-toggle {
+      font-size: 30px;
+      position: relative;
+      top: 15px;
+      width: auto;
+      left: 12%;
+
+    }
+    #menu-toggle:hover {
+      opacity: 0.8;
+
+    }
+  }
+
+
+.top {
+  height: 353px; /* Space in here for search */
+  padding-top: 40px;
+  position: relative;
+}
+
 .block-title__container {
   background: linear-gradient(135deg,#50E3C2,#85BAFF);
 }
@@ -26,7 +76,7 @@
   text-align: center;
 }
 .description {
-  height: 3em;
+  height: 7em;
   overflow: hidden;
 }
 
@@ -36,10 +86,11 @@
 }
 
 .image-col {
-  max-width: 945px;
   position: relative;
-
-
+  background-color: white;
+  max-width: 100%;
+  margin-bottom: 3%;
+  padding: 15px;
   .col-xs-6 {
     width: 460.78px;
   }
@@ -50,6 +101,7 @@
 
   .right-col{
     height: inherit;
+    width: 55%;
       .author {
         position: absolute;
         bottom: 2px;
@@ -60,19 +112,15 @@
         bottom: 2px;
         right: 10px;
       }
+      .title {
+        font-size: 3rem;
+      }
   }
 
 
+
 }
 
-
-.col-xs-6{
-  border: 3px solid red;
-}
-
-.col-xs-12{
-  border: 3px solid green;
-}
 
 
 
