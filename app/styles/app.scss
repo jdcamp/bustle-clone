@@ -1,0 +1,80 @@
+#logo {
+  height: 40px;
+  width: auto;
+}
+.social-media-logo {
+  height: 25px;
+  width: auto;
+  margin: 5px;
+}
+
+.navbar {
+  background-color: white;
+  opacity: 0.7;
+}
+.block-title__container {
+  background: linear-gradient(135deg,#50E3C2,#85BAFF);
+}
+.block-title {
+  font-size: 26px;
+  color: white;
+  text-align: center;
+}
+
+.today {
+  color: white;
+  text-align: center;
+}
+.description {
+  height: 3em;
+  overflow: hidden;
+}
+
+.row {
+  height: 245px;
+
+}
+
+.image-col {
+  max-width: 945px;
+  position: relative;
+
+
+  .col-xs-6 {
+    width: 460.78px;
+  }
+
+  .image{
+    width: 100%;
+  }
+
+  .right-col{
+    height: inherit;
+      .author {
+        position: absolute;
+        bottom: 2px;
+        left: 10px;
+      }
+      .date {
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+      }
+  }
+
+
+}
+
+
+.col-xs-6{
+  border: 3px solid red;
+}
+
+.col-xs-12{
+  border: 3px solid green;
+}
+
+
+
+@import "ember-bootstrap/bootstrap";
+@import "ember-side-menu";
