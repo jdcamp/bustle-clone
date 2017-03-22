@@ -20,3 +20,23 @@ export default Ember.Component.extend({
     }
   }
 });
+// $(function() {
+//
+// });
+//
+// $(document).on('click', '.update-button', function() {
+//       $('.update-button').click(function() {
+//           $(".update-form").css("display", "block");
+//           //$(".update-form").addClass('update-form-show');
+//           console.log("clicked");
+//
+//         });
+//       });
+// $(document).on('click', '.update-button', function() {
+//       $('.update-button').click(function() {
+//           $(".update-form").css("display", "block");
+//           //$(".update-form").addClass('update-form-show');
+//           console.log("clicked");
+//
+//         });
+//       });

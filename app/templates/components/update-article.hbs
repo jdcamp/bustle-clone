@@ -1,5 +1,5 @@
 {{#if updateArticle}}
-  <div>
+  <div class='update-form'>
     <form>
       <div class="form-group">
         <label for="name">Author</label>
@@ -18,17 +18,17 @@
 
       <div class="form-group">
         <label for="date">Date</label>
-        {{input value=date id="date" placeholder=article.date}}
+        {{input type='date' value=date id="date" placeholder=article.date}}
       </div>
 
       <div class="form-group">
         <label for="image">Image URL</label>
-        {{input type='image' value=image id="image" placeholder=article.date}}
+        {{input value=image id="image" placeholder=article.image}}
       </div>
 
       <button {{action 'update' article}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'updateFormShow' article}}>Update</button>
+  <button class='update-button' {{action 'updateFormShow' article}}>Update</button>
 {{/if}}
