@@ -1,0 +1,8 @@
+<ul>
+  {{#each model as |article|}}
+     {{admin-tile article=article destroyArticle="destroyArticle"}}
+     {{update-article article=article update="update"}}
+  {{/each}}
+</ul>
+
+{{add-article saveArticle="saveArticle"}}

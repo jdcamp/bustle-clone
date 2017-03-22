@@ -1,16 +1,14 @@
-{{#link-to 'article' article.id}}
 <div class="col-xs-12 image-col">
   <div class='row'>
     <div class='col-xs-6'>
       <img class='image' src={{article.image}} alt={{article.title}}>
     </div>
-    <div class='col-xs-6 right-col'>
+    <div class='col-xs-6'>
       <p class="title">{{article.title}}</p>
-      <p class="description">{{article.body}}</p>
+      <p>{{article.body}}</p>
       <p class="author">{{article.author}}</p>
       <p class="date">{{article.date}}</p>
     </div>
   </div>
 </div>
-{{/link-to}}
 {{yield}}

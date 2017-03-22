@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('page-not-found', {
     path: '/*wildcard'
   });
+  this.route('admin');
+  this.route('article', {path: '/article/:article_id'});
 });
 
 export default Router;

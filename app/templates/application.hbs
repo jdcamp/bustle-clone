@@ -1,11 +1,11 @@
 
     {{#burger-menu as |burger|}}
-      {{#burger.menu itemTagName="li" as |menu|}}
-        <ul>
+      {{#burger.menu itemTagName="h4" as |menu|}}
+
           {{#menu.item}}
-            {{new-article saveArticle='saveArticle'}}
+          {{#link-to 'admin'}}Admin acces{{/link-to}}
+            <!-- {{new-article saveArticle='saveArticle'}} -->
           {{/menu.item}}
-        </ul>
       {{/burger.menu}}
 
       {{#burger.outlet}}
