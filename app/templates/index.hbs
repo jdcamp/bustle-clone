@@ -9,7 +9,7 @@
       <p class='block-title'>Today's Top Stories</p>
       <p class='today'>{{moment-format moment 'MMMM DD, YYYY'}}</p>
     </section>
-    {{#each model as |article|}}
+    {{#each model.articles as |article|}}
     {{article-tile article=article}}
     {{/each}}
   </div>

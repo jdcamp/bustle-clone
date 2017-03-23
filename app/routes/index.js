@@ -4,7 +4,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('article');
+    return Ember.RSVP.hash({
+      articles: this.store.findAll('article'),
+      comments: this.store.findAll('comment')
+    });
   },
   actions: {
     saveArticle(params) {
@@ -28,17 +31,15 @@ $(function() {
   //   }
   // });
 
-
-
   $(window).scroll(function() {
     var wrap = $("#wrap");
     var scroll = $(window).scrollTop();
-       if (scroll >= 353) {
-          wrap.addClass("navbar-fixed-top");
-          console.log("working");
-        } else {
-          console.log("not working");
-          wrap.removeClass("navbar-fixed-top");
-        }
+    if (scroll >= 353) {
+      wrap.addClass("navbar-fixed-top");
+      console.log("working");
+    } else {
+      console.log("not working");
+      wrap.removeClass("navbar-fixed-top");
+    }
+  });
 });
-})
