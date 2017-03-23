@@ -119,8 +119,32 @@
     }
   }
 }
+
+.image-article {
+    display: flex;
+    margin: auto;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+}
 .main-body {
   background-color: #F7F7F7;
+  font-family: Montserrat;
+}
+.main-article, .comments {
+
+  display:block;
+  resize: both;
+  overflow: visible;
+  background-color: white;
+}
+.comments {
+  margin: 10px;
+  padding: 5px;
+}
+.title-article {
+  font-size: 4rem;
+  text-align: center;
 }
 
 @import "ember-bootstrap/bootstrap";
