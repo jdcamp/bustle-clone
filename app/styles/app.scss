@@ -57,6 +57,7 @@
   /* Space in here for search */
   padding-top: 40px;
   position: relative;
+  background-color: white;
 }
 
 .block-title__container {
@@ -130,6 +131,8 @@
 .main-body {
   background-color: #F7F7F7;
   font-family: Montserrat;
+  background-image: url(/img/geometry2.png);
+  background-repeat:round;
 }
 .main-article, .comments {
 
