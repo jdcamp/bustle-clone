@@ -140,15 +140,38 @@
   resize: both;
   overflow: visible;
   background-color: white;
+  margin: auto;
+  letter-spacing: 1px;
+
 }
 .comments {
-  margin: 10px;
+  margin-top: 10px;
   padding: 5px;
 }
 .title-article {
   font-size: 4rem;
   text-align: center;
 }
+
+.main-img {
+  width: 85%;
+}
+.image-overlap {
+  position: relative;
+
+}
+.main-title {
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  background-color: black;
+  color: white;
+  opacity: .5;
+  left: 85.5px;
+  font-size: 50px;
+  width: 85%;
+}
+
 
 @import "ember-bootstrap/bootstrap";
 @import "ember-side-menu";

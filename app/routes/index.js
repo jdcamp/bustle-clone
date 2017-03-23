@@ -6,9 +6,15 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       articles: this.store.findAll('article'),
-      comments: this.store.findAll('comment')
+      comments: this.store.findAll('comment'),
+      main: this.store.findAll('article').then((list) => {
+          const rand = Math.floor(Math.random() * list.get('length'));
+          console.log(list.objectAt(rand));
+          return list.objectAt(rand);
+      })
     });
   },
+
   actions: {
     saveArticle(params) {
       var newArticle = this.store.createRecord('article', params);

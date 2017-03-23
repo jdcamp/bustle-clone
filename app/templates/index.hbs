@@ -1,6 +1,18 @@
 {{outlet}}
 
 <div class='featured'>
+  <div class='row content'>
+    <div class='col-xs-12'>
+      <section class='block-title__container'>
+        <p class='block-title'>Featured Story</p>
+        <p class='today'>{{moment-format moment 'MMMM DD, YYYY'}}</p>
+      </section>
+      <div class="image-overlap">
+        <img class='main-img center-block' src= {{model.main.image}} alt= {{model.main.title}}>
+        <p class='main-title'>{{model.main.title}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class='row content'>
@@ -10,7 +22,7 @@
       <p class='today'>{{moment-format moment 'MMMM DD, YYYY'}}</p>
     </section>
     {{#each model.articles as |article|}}
-    {{article-tile article=article}}
+      {{article-tile article=article}}
     {{/each}}
   </div>
 </div>
